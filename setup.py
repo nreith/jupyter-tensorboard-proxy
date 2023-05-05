@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name="jupyter-tensorboard-proxy",
-    version='0.1.1',
+    version='0.2.0',
     url="https://github.com/kopwei/jupyter-tensorboard-proxy",
     author="kopkop",
     description="kopkop@gmail.com",
@@ -21,7 +21,9 @@ setuptools.setup(
 	classifiers=['Framework :: Jupyter'],
     install_requires=[
         'jupyter-server-proxy>=1.5.0',
-        'tensorboard>=2.4.1'
+        'python-dotenv>=1.0.0',
+        'tensorboard>=2.4.1',
+        'tensorflow-io>=0.32.0'
     ],
     entry_points={
         'jupyter_serverproxy_servers': [

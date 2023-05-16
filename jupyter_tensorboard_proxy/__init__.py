@@ -56,7 +56,7 @@ def setup_tensorboard():
             else:
                 logger.info("Directory %s already exists" % working_dir)
             TF_LOG_DIR = '%s/logs' % home_dir
-        return ['tensorboard', '--logdir', TF_LOG_DIR, '--port', '{port}']
+        return ['source /home/$USER/.bashrc;', 'tensorboard', '--logdir', TF_LOG_DIR, '--port', '{port}']
     
     return {
         'command': _get_tensorboard_command,
